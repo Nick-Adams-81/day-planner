@@ -51,6 +51,9 @@ switch (date) {
   case 23:
     date += 'rd';
     break;
+  case 31:
+    date += 'st'
+    break;
   default:
     date += 'th';
     break;
