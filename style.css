@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-  background-color: antiquewhite;
+  background-image: url(https://images.unsplash.com/photo-1576854531280-9087cfd26e86?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
 }
 
 
@@ -18,8 +18,9 @@ textarea{
 
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  font-weight: 900;
+  background-image: url(https://images.unsplash.com/photo-1580524986798-17a8876235ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
+  color: #06AED5;
   border-radius: 0;
   border-bottom: 10px solid black;
 }
@@ -66,7 +67,7 @@ textarea{
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
-  color: white;
+  color: antiquewhite;
 }
 
 .saveBtn i:hover {
