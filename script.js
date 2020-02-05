@@ -1,6 +1,4 @@
-/**
- * Get the current date and display it
- */
+
 const days = [
               "Sunday", 
               "Monday",
@@ -88,13 +86,10 @@ const colorCodedTextArea = (hour, savedItems) => {
 
   return textArea;
 }
-/**
- * Display timeblocks
- */
-// Get local storage
+
 const items = JSON.parse(localStorage.getItem('items'));
 
-// Create a div with class of row
+
 const row = $('<div>');
 row.addClass('row time-block');
 
@@ -103,7 +98,7 @@ let noon = '';
 let afternoon = '';
 
 for (let index = 9; index < 18; index++) {
-    // Create time blocks for 9am to 12pm
+    
     index < 12 ?
       am += 
       `
@@ -111,7 +106,7 @@ for (let index = 9; index < 18; index++) {
       ${colorCodedTextArea(index, items)}
       <button class="col-1 saveBtn" data-target="${index}"><i class="fas fa-save"></i></button>
       `
-    // Create timeblock for noon
+    
     : (index === 12) ?
       noon = 
       `
@@ -120,7 +115,7 @@ for (let index = 9; index < 18; index++) {
       <button class="col-1 saveBtn" data-target="${index}"><i class="fas fa-save"></i></button>
       `
     :
-    // Create time blocks for 12pm to 5pm
+    
     afternoon +=
     `
     <div class="col-1 hour">${index - 12}PM</div>
@@ -136,10 +131,7 @@ row.append(noon);
 row.append(afternoon);
 $('.container').append(row);
 
-/**
- * Add event listeners to saveBtn(s) and text area item so that
- * schedule items will be saved to localstorage
- */
+
 $('.saveBtn').on('click', function(event) {
   event.preventDefault();
   console.log('clicked');
@@ -150,10 +142,7 @@ $('.saveBtn').on('click', function(event) {
   saveToLocalStorage(id, item);
 })
 
-/**
- * Save schedule item to local storage
- * 
- */
+
 const saveToLocalStorage = (id, item) => {
 
     // Check if local storage is already initilized
